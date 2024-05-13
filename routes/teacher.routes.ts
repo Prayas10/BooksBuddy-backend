@@ -1,0 +1,15 @@
+import { Router } from "express";
+import protectRoute from "../middlewares/auth.middleware";
+import {
+  loginController,
+  logoutController,
+  signupController,
+} from "../controllers/teacher.controller";
+
+const router = Router();
+
+router.route("/signup").post(signupController);
+router.route("/login").post(loginController);
+router.route("/logout").post(protectRoute, logoutController);
+
+export default router;
