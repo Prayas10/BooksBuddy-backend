@@ -15,8 +15,7 @@ app.use(cookieParser());
 const corsOptions = {
   origin: [
     "http://localhost:5173",
-    "https://teacher-attendance-frontend.vercel.app",
-    "https://student-attendance-fe.vercel.app",
+    "https://booksbuddy-frontend.vercel.app"
   ],
   credentials: true,
 };
